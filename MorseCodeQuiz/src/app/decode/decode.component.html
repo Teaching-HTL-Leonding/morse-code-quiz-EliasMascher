@@ -1,0 +1,12 @@
+<h2>Decode</h2>
+
+<div>
+  <textarea name="inputPlainText" cols="30" rows="10" placeholder="Enter your MorseCode" [(ngModel)]="inputMorseCode" required #inputTextField="ngModel" pattern="^[.\-/  ]*$"></textarea>
+</div>
+<div>
+  <button [disabled]="!(!inputTextField.errors)" (click)="onButtonDecode()">Decode</button>
+</div>
+<p [hidden]="!(inputTextField.errors || printError)" class="error">Input ist ungültig</p>
+<div>Output
+  <input type="text" name="outputField" [(ngModel)]="plainOutput" readonly>
+</div>

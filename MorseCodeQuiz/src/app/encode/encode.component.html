@@ -1,0 +1,10 @@
+<h2>Encode</h2>
+<div>
+  <textarea name="inputPlainText" cols="30" rows="10" placeholder="Enter your Plaintext" [(ngModel)]="inputText" required #inputTextField="ngModel" pattern="^[A-Z ]+$"></textarea>
+</div>
+<div>
+  <button [disabled]="!(!inputTextField.errors)" (click)="output= service.encodeText(inputText)">Encode</button>
+</div>
+<div>Output
+  <input type="text" name="outputField" [(ngModel)]="output" readonly>
+</div>

@@ -1,0 +1,9 @@
+*{
+  font-family: sans-serif;
+}
+div{
+  margin-top: 10px;
+}
+.error{
+  color: red;
+}
